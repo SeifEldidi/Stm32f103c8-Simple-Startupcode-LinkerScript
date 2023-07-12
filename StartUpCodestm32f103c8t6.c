@@ -109,8 +109,8 @@ uint32_t *Vector_Table[] __attribute__((section(".isr_vector")))={
     (uint32_t *)&SysTick_Handler,
     (uint32_t *)&WWDG_Handler,                   /* Window WatchDog              */                                        
     (uint32_t *)&PVD_Handler,                    /* PVD through EXTI Line detection */                        
-    (uint32_t *)&TAMPER_Handler,             /* Tamper and TimeStamps through the EXTI line */            
-    (uint32_t *)&RTC_IRQHandler,               /* RTC Wakeup through the EXTI line */                      
+    (uint32_t *)&TAMPER_Handler,                 /* Tamper and TimeStamps through the EXTI line */            
+    (uint32_t *)&RTC_IRQHandler,                   /* RTC Wakeup through the EXTI line */                      
     (uint32_t *)&FLASH_IRQhandler,                  /* FLASH                        */                                          
     (uint32_t *)&RCC_IRQhandler,                    /* RCC                          */                                            
     (uint32_t *)&EXTI0_IRQHandler,                  /* EXTI Line0                   */                        
@@ -126,8 +126,8 @@ uint32_t *Vector_Table[] __attribute__((section(".isr_vector")))={
     (uint32_t *)&DMA1_Channel6_IRQHandler,           /* DMA1 Stream 5                */                   
     (uint32_t *)&DMA1_Channel7_IRQHandler,           /* DMA1 Stream 6                */                   
     (uint32_t *)&ADC_IRQHandler,                    /* ADC1, ADC2 and ADC3s         */                   
-    (uint32_t *)&USB_HP_CAN_TX_IRQHandler,                /* CAN1 TX                      */                         
-    (uint32_t *)&USB_LP_CAN_RX0_IRQHandler,               /* CAN1 RX0                     */                          
+    (uint32_t *)&USB_HP_CAN_TX_IRQHandler,                /* USB_CAN1 TX                      */                         
+    (uint32_t *)&USB_LP_CAN_RX0_IRQHandler,               /* USB_CAN1 RX0                     */                          
     (uint32_t *)&CAN_RX1_IRQHandler,               /* CAN1 RX1                     */                          
     (uint32_t *)&CAN_SCE_IRQHandler,               /* CAN1 SCE                     */                          
     (uint32_t *)&EXIT9_5IRQHandler,                /* External Line[9:5]s          */                          
@@ -150,22 +150,22 @@ uint32_t *Vector_Table[] __attribute__((section(".isr_vector")))={
     (uint32_t *)&EXTI15_10_IRQHandler,              /* External Line[15:10]s        */                          
     (uint32_t *)&RTCAlarm_IRQHandler,              /* RTC Alarm (A and B) through EXTI Line */                 
     (uint32_t *)&USBWakeup_IRQHandler,            /* USB OTG FS Wakeup through EXTI line */                                         
-    (uint32_t *)&TIM8_BRK_IRQHandler,                   /* TIM5                         */                   
-    (uint32_t *)&TIM8_UP_IRQHandler,                   /* SPI3                         */                   
-    (uint32_t *)&TIM8_TRG_COM_IRQHandler,                  /* UART4                        */                   
-    (uint32_t *)&TIM8_CC_IRQHandler,                  /* UART5                        */                   
-    (uint32_t *)&ADC3_IRQHandler,               /* TIM6 and DAC1&2 underrun errors */                   
-    (uint32_t *)&FSMC_IRQHandler,                   /* TIM7                         */
-    (uint32_t *)&SDIO_IRQHandler,           /* DMA2 Stream 0                */                   
-    (uint32_t *)&TIM5_IRQHandler,           /* DMA2 Stream 1                */                   
-    (uint32_t *)&SPI3_IRQHandler,           /* DMA2 Stream 2                */                   
-    (uint32_t *)&UART4_IRQHandler,           /* DMA2 Stream 3                */                   
-    (uint32_t *)&UART5_IRQHandler,           /* DMA2 Stream 4                */                   
-    (uint32_t *)&TIM6_IRQHandler,                    /* Ethernet                     */                   
-    (uint32_t *)&TIM7_IRQHandler,               /* Ethernet Wakeup through EXTI line */                     
-    (uint32_t *)&DMA2_Channel1_IRQHandler,                /* CAN2 TX                      */                          
-    (uint32_t *)&DMA2_Channel2_IRQHandler,               /* CAN2 RX0                     */                          
-    (uint32_t *)&DMA2_Channel3_IRQHandler,               /* CAN2 RX1                     */                          
+    (uint32_t *)&TIM8_BRK_IRQHandler,                   /* TIM8   BREAK                       */                   
+    (uint32_t *)&TIM8_UP_IRQHandler,                   /* TIM8 UP                        */                   
+    (uint32_t *)&TIM8_TRG_COM_IRQHandler,                  /* TIM8                         */                   
+    (uint32_t *)&TIM8_CC_IRQHandler,                  /* TIM8                        */                   
+    (uint32_t *)&ADC3_IRQHandler,               /* ADC3 */                   
+    (uint32_t *)&FSMC_IRQHandler,                   /* FSMC                        */
+    (uint32_t *)&SDIO_IRQHandler,           /* SDIO               */                   
+    (uint32_t *)&TIM5_IRQHandler,           /* TIM5                */                   
+    (uint32_t *)&SPI3_IRQHandler,           /* SPI 3                */                   
+    (uint32_t *)&UART4_IRQHandler,           /* USART4                */                   
+    (uint32_t *)&UART5_IRQHandler,           /* USART5                */                   
+    (uint32_t *)&TIM6_IRQHandler,                    /* TIM6                     */                   
+    (uint32_t *)&TIM7_IRQHandler,               /* TIM7 */                     
+    (uint32_t *)&DMA2_Channel1_IRQHandler,                /* DMA2 Stream 1                */                           
+    (uint32_t *)&DMA2_Channel2_IRQHandler,               /* DMA2 Stream 2                */                           
+    (uint32_t *)&DMA2_Channel3_IRQHandler,                /* DMA2 Stream 3                */                           
 };
 
 static void System_Initiliazation(void){
